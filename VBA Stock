@@ -43,11 +43,11 @@ For Each sheet In ThisWorkbook.Worksheets
         If sheet.Cells(X + 1, 1).Value <> sheet.Cells(X, 1).Value Then
 
             symbol = sheet.Cells(X, 1).Value
-            Volume = Volume + Cells(X, 7).Value
             openprice = sheet.Cells(X + 1, 3).Value
             closeprice = sheet.Cells(X, 6).Value
             change = closeprice - openprice
             pchange = (closeprice - openprice) / closeprice
+            Volume = Volume + Cells(X, 7).Value
         
             'insert values into table
                 sheet.Cells(Table, 9).Value = symbol
